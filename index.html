@@ -9,45 +9,69 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f5f7fa;
+      background: linear-gradient(180deg, #f4f7fb, #eef2f7);
       color: #000;
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
     .card {
       background: #ffffff;
-      border-radius: 12px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      text-align: center;
+      border-radius: 16px;
+      padding: 50px 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 34px;
+      text-align: center;
       margin-bottom: 10px;
     }
 
-    h2 {
-      font-size: 20px;
-      font-weight: normal;
-      margin-bottom: 30px;
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 40px;
     }
 
-    .items {
-      text-align: left;
+    .text {
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #111;
+    }
+
+    .requirements {
+      background: #f8faff;
+      border-radius: 12px;
+      padding: 30px;
       max-width: 600px;
       margin: 0 auto 40px auto;
     }
 
-    .items li {
-      font-size: 16px;
+    .requirements h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .requirements ul {
+      padding-left: 20px;
+    }
+
+    .requirements li {
       margin-bottom: 12px;
-      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .btn-container {
+      text-align: center;
     }
 
     .btn {
@@ -55,27 +79,34 @@
       background-color: #4f8cff;
       color: #ffffff;
       text-decoration: none;
-      padding: 16px 32px;
-      border-radius: 8px;
+      padding: 18px 40px;
+      border-radius: 10px;
       font-size: 18px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      box-shadow: 0 8px 20px rgba(79,140,255,0.30);
+      transition: all 0.3s ease;
+
+      /* EFECTO BREATHE */
+      animation: breathe 2.8s ease-in-out infinite;
     }
 
     .btn:hover {
       background-color: #3b74d9;
+      transform: translateY(-2px);
     }
 
     .note {
       margin-top: 30px;
+      text-align: center;
       font-size: 14px;
-      color: #333;
+      color: #444;
     }
 
     footer {
       margin-top: 40px;
+      text-align: center;
       font-size: 13px;
-      color: #555;
+      color: #666;
     }
 
     @media (max-width: 600px) {
@@ -83,12 +114,24 @@
         font-size: 26px;
       }
 
-      h2 {
-        font-size: 18px;
-      }
-
       .card {
-        padding: 30px 20px;
+        padding: 35px 25px;
+      }
+    }
+
+    /* KEYFRAMES DEL EFECTO BREATHE */
+    @keyframes breathe {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 8px 20px rgba(79,140,255,0.30);
+      }
+      50% {
+        transform: scale(1.04);
+        box-shadow: 0 14px 35px rgba(79,140,255,0.45);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 8px 20px rgba(79,140,255,0.30);
       }
     }
   </style>
@@ -100,28 +143,34 @@
     <div class="card">
 
       <h1>Oportunidad de Trabajo Remoto</h1>
-      <h2>Buscamos personas responsables y con ganas de trabajar desde casa</h2>
+      <p class="subtitle">Buscamos personas responsables para trabajar desde casa</p>
 
-      <ul class="items">
-        <li>✔ Trabajo 100% remoto, desde cualquier parte de Venezuela</li>
-        <li>✔ No necesitás experiencia previa específica</li>
-        <li>✔ Horarios flexibles según disponibilidad</li>
-        <li>✔ Proceso simple y transparente</li>
-        <li>✔ Primero completás el formulario, luego te contactamos</li>
-        <li>✔ Si el perfil encaja, pasás a una etapa de prueba</li>
-      </ul>
+      <div class="text">
+        Estamos en la búsqueda de personas comprometidas y organizadas que quieran trabajar de forma remota.
+        El trabajo se realiza desde casa y requiere responsabilidad, constancia y manejo básico de herramientas digitales.
+        Para avanzar en el proceso es obligatorio completar el formulario.  
+        Si tu perfil coincide con el puesto, nos pondremos en contacto para continuar con una etapa de prueba.
+      </div>
 
-      <a 
-        href="https://tulinkdelformulario.com" 
-        class="btn" 
-        target="_blank"
-      >
-        Completar formulario
-      </a>
+      <div class="requirements">
+        <h3>Requisitos y condiciones</h3>
+        <ul>
+          <li>Trabajo remoto 100% desde Venezuela</li>
+          <li>Jornada de 6 días a la semana – 8 horas diarias</li>
+          <li>Conocimiento básico en uso de computadora y Excel</li>
+          <li>Edad mínima: mayores de 20 años</li>
+          <li>Completar el formulario es obligatorio para avanzar</li>
+        </ul>
+      </div>
+
+      <div class="btn-container">
+        <a href="https://tulinkdelformulario.com" target="_blank" class="btn">
+          Completar formulario
+        </a>
+      </div>
 
       <p class="note">
-        El formulario es obligatorio para poder avanzar.<br>
-        Revisamos cada aplicación y contactamos solo a los perfiles preseleccionados.
+        Revisamos cada aplicación y contactamos únicamente a los perfiles preseleccionados.
       </p>
 
       <footer>
