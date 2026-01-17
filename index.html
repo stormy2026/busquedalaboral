@@ -141,6 +141,35 @@
   vertical-align: middle;
   margin-left: 6px;
 }
+
+    /* Bandera mobile (emoji) */
+.flag-mobile {
+  display: none;
+  font-size: 1em;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Bandera desktop (imagen) */
+.flag-desktop {
+  display: inline-block;
+  width: 22px;
+  height: auto;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .flag-desktop {
+    display: none;
+  }
+
+  .flag-mobile {
+    display: inline;
+  }
+}
+
   </style>
 </head>
 
@@ -149,9 +178,10 @@
   <div class="container">
     <div class="card">
 
-      <h1>
-  Busqueda laboral remota 
-  <img src="https://flagcdn.com/w20/ve.png" alt="Venezuela" class="flag-icon">
+     <h1>
+  Busqueda laboral remota
+  <span class="flag-mobile">🇻🇪</span>
+  <img src="https://flagcdn.com/w20/ve.png" alt="Venezuela" class="flag-desktop">
 </h1>
 
       <div class="text">
